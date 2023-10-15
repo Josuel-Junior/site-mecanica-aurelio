@@ -1,23 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/index.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./css/styles.css" />
+
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@300;500;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
     <title>Mecânica do Aurélio</title>
+
+    
   </head>
   <body>
-    <div class="container-main">
-      <div class="box">
-        <img src="./img/imageIndex/icons8-carro.gif" alt="Site em contrução" />
-        <h1>Estamos construindo uma nova experiência</h1>
-      </div>
-    </div>
-  </body>
+    <header>
+      <nav class="navbar navbar-expand-lg fixed-top p-0">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="./img/logo/icon-navbar.png" alt="Logo da empresa" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="offcanvas offcanvas-start"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                Padaria Cardeal
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#">Início</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">Cardápio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">Encomendas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">Nossa História</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">Contato</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">Política de Qualidade</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+
+    <swiper-container init="false" class="mySwiper3">
+      <swiper-slide>
+        <div class="box-text-slider">
+          <h2>Bem-vindo à Mecânica do Aurélio</h2>
+            <p>Somos uma mecânica especializada em carros nacionais e importadaos</p>
+          </div>
+          <img src="./img/imageIndex/slide-3.png" alt="">
+      </swiper-slide>
+      <swiper-slide>
+        <div class="box-text-slider">
+          <h2>Bem-vindo à Mecânica do Aurélio</h2>
+            <p>Somos uma mecânica especializada em carros nacionais e importadaos</p>
+          </div>
+          <img src="./img/imageIndex/slide-2.png" alt="">
+      </swiper-slide>
+      <swiper-slide>
+        <div class="box-text-slider">
+          <h2>Bem-vindo à Mecânica do Aurélio</h2>
+            <p>Somos uma mecânica especializada em carros nacionais e importados</p>
+          </div>
+          <img src="./img/imageIndex/slide-1.png" alt="">
+      </swiper-slide>
+      <!-- <swiper-slide>
+        <div class="box-text-slider">
+          <h2>Bem-vindo à Mecânica do Aurélio</h2>
+            <p>Somos especializados em serviços de mecânica em carros nacionais e importados</p>
+          </div>
+          <img src="./img/imageIndex//slide-2.png" alt="">
+      </swiper-slide>
+      <swiper-slide>
+        <div class="box-text-slider">
+          <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae, necessitatibus porro ut sequi 
+            hic culpa velit. Placeat, ipsum molestias, suscipit esse doloremque rerum ad obcaecati quam natus 
+            laboriosam, nam aliquid.</h2>
+          </div>
+          <img src="./img/imageIndex/slide-3.png" alt="">
+      </swiper-slide>
+       -->
+      
+     
+    </swiper-container>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+    <script src="./script/scriptIndex.js"></script>
 </html>
