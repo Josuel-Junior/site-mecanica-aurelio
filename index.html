@@ -21,6 +21,7 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
     <title>Mecânica do Aurélio</title>
 
@@ -28,7 +29,7 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg fixed-top p-0">
+      <nav class="navbar navbar-expand-lg navbar-custom fixed-top p-0">
         <div class="container">
           <a class="navbar-brand" href="#">
             <img src="./img/logo/icon-navbar.png" alt="Logo da empresa" />
@@ -60,9 +61,9 @@
               ></button>
             </div>
             <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 ">
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#">Início</a>
+                  <a class="nav-link " aria-current="page" href="#">Início</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="">Cardápio</a>
@@ -84,52 +85,85 @@
           </div>
         </div>
       </nav>
+      <swiper-container init="false" class="mySwiper3">
+        <swiper-slide>
+          <div class="box-text-slider">
+            <h2>Bem-vindo à Mecânica do Aurélio</h2>
+              <p>Somos uma mecânica especializada em carros nacionais e importadaos</p>
+              <a href="">Contato</a>
+            </div>
+            <img src="./img/imageIndex/slide-3.png" alt="">
+        </swiper-slide>
+         <swiper-slide>
+          <div class="box-text-slider">
+            <h2>Compromisso com a Qualidade</h2>
+              <p>A excelência é a marca registrada da Mecânica do Aurélio</p>
+              <a href="">Sobre nós</a>
+            </div>
+            <img src="./img/imageIndex/slide-2.png" alt="">
+        </swiper-slide>
+        <swiper-slide>
+          <div class="box-text-slider">
+            <h2>Profissionais e tecnologia de ponta</h2>
+              <p>Nossos mecânicos, aliados a equipamentos de última geração, garantem um serviço de qualidade impecável</p>
+              <a href="">Serviços</a>
+            </div>
+            <img src="./img/imageIndex/slide-1.png" alt="">
+        </swiper-slide> 
+      </swiper-container>
     </header>
+    <section class="services-section">
+      <div class="services-text">
 
+        <h2>Nossos Serviços</h2>
+        <p>A Mecânica do Aurélio é uma empresa renomada e dedicada a fornecer uma ampla 
+          gama de serviços automotivos de alta qualidade para atender às necessidades de 
+          seus clientes. Com anos de experiência no setor automotivo, a Mecânica do Aurélio oferece um 
+          conjunto abrangente de serviços especializados para garantir que seu veículo funcione da melhor 
+          forma possível.</p>
+      </div>
+      <div class="services-container">
+        <div class="row  d-flex align-items-start justify-content-center">
+          <div class="service-box col-12 col-md-4 col-xl-3 p-2">
+            <img src="./img/icon/brakes.svg" alt="">
+            <h3>Revisão de Freio</h3>
+            <p>A empresa realiza inspeções detalhadas e serviços de manutenção 
+              em sistemas de freio, garantindo que seu veículo pare de maneira segura e eficaz.</p>
+          </div>
+          <div class="service-box col-12 col-md-4 col-xl-3 p-2">
+            <img src="./img/icon/engine.svg" alt="">
+            <h3>Injeção eletrônica</h3>
+            <p>Mecânica do Aurélio é referência em injeção eletrônica.
+               Nosso diagnóstico avançado e reparos especializados garantem o máximo desempenho do seu veículo.</p>
+          </div>
+          <div class="service-box col-12 col-md-4 col-xl-3 p-2">
+            <img src="./img/icon/oil.svg" alt="">
+            <h3>Troca de óleo</h3>
+            <p>A troca regular de óleo é essencial para a saúde do motor do seu veículo, e a Mecânica do Aurélio oferece um serviço rápido e eficiente.</p>
+          </div>
+        </div>
+        <div class="row d-flex align-items-start justify-content-center">
+          <div class="service-box col-12 col-md-4 col-xl-3 p-2">
+            <img src="./img/icon/tire.svg" alt="">
+            <h3>Troca de Pneus</h3>
+            <p>Nossa troca de pneus é sinônimo de qualidade e eficiência. Confie em nossa equipe para garantir que seu veículo esteja sempre pronto para a estrada</p>
+          </div>
+          <div class="service-box col-12 col-md-4 col-xl-3 p-2">
+            <img src="./img/icon/transmission.svg" alt="">
+            <h3>Transmissão</h3>
+            <p>Nossa manutenção de transmissão cuida da prevenção e solução de problemas. Garantimos a eficiência e segurança da sua transmissão.</p>
+          </div>
+          <div class="service-box col-12 col-md-4 col-xl-3 p-2">
+            <img src="./img/icon/car.svg" alt="">
+            <h3>Serviços de Leva e Traz</h3>
+            <p>Oferecemos serviço de leva e traz para sua comodidade. Sua manutenção sem sair de casa.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <swiper-container init="false" class="mySwiper3">
-      <swiper-slide>
-        <div class="box-text-slider">
-          <h2>Bem-vindo à Mecânica do Aurélio</h2>
-            <p>Somos uma mecânica especializada em carros nacionais e importadaos</p>
-          </div>
-          <img src="./img/imageIndex/slide-3.png" alt="">
-      </swiper-slide>
-      <swiper-slide>
-        <div class="box-text-slider">
-          <h2>Bem-vindo à Mecânica do Aurélio</h2>
-            <p>Somos uma mecânica especializada em carros nacionais e importadaos</p>
-          </div>
-          <img src="./img/imageIndex/slide-2.png" alt="">
-      </swiper-slide>
-      <swiper-slide>
-        <div class="box-text-slider">
-          <h2>Bem-vindo à Mecânica do Aurélio</h2>
-            <p>Somos uma mecânica especializada em carros nacionais e importados</p>
-          </div>
-          <img src="./img/imageIndex/slide-1.png" alt="">
-      </swiper-slide>
-      <!-- <swiper-slide>
-        <div class="box-text-slider">
-          <h2>Bem-vindo à Mecânica do Aurélio</h2>
-            <p>Somos especializados em serviços de mecânica em carros nacionais e importados</p>
-          </div>
-          <img src="./img/imageIndex//slide-2.png" alt="">
-      </swiper-slide>
-      <swiper-slide>
-        <div class="box-text-slider">
-          <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae, necessitatibus porro ut sequi 
-            hic culpa velit. Placeat, ipsum molestias, suscipit esse doloremque rerum ad obcaecati quam natus 
-            laboriosam, nam aliquid.</h2>
-          </div>
-          <img src="./img/imageIndex/slide-3.png" alt="">
-      </swiper-slide>
-       -->
-      
-     
-    </swiper-container>
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
-    <script src="./script/scriptIndex.js"></script>
+    <script src="./script/scriptHome.js"></script>
 </html>

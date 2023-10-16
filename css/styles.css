@@ -7,7 +7,11 @@
 
 :root {
   --font-color-primary: #ffffff;
-  --font-color-primary-hover: #C00113;
+  --font-background-color: #c00113;
+  --font-background-color-black: #000000;
+  --font-color-hover: #8d0a17df;
+  --font-size-p-desktop: 1.1rem;
+  --font-size-title-desktop: 2.6rem;
 }
 
 .navbar-brand img {
@@ -15,21 +19,31 @@
 }
 
 .nav-item a {
-  color: var(--font-color-primary);
   font-weight: 500;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
-.nav-item a:hover {
-  color: var(--font-color-primary-hover);
-}
-.nav-item:nth-child(4) a{
+
+.navbar-custom a {
   color: var(--font-color-primary);
-  background-color: var(--font-color-primary-hover);
+  transition: all 0.5s;
+}
+.navbar-custom-trans {
+  background-color: var(--font-color-primary);
+  transition: all 0.5s;
+}
+
+.nav-item a:hover {
+  color: var(--font-background-color);
+}
+.nav-item:nth-child(4) a {
+  color: var(--font-color-primary);
+  background-color: var(--font-background-color);
+  background-color: var(--font-background-color);
   border-radius: 5px;
 }
-.nav-item:nth-child(4) a:hover{
+.nav-item:nth-child(4) a:hover {
   color: var(--font-color-primary);
-  background-color: #710d17df;
+  background-color: var(--font-color-hover);
   border-radius: 5px;
 }
 
@@ -59,10 +73,65 @@ swiper-slide img {
   color: var(--font-color-primary);
   text-align: center;
 }
-.box-text-slider h2{
-  font-size: 3.3rem;
+.box-text-slider h2 {
+  font-size: 3.4rem;
+  font-weight: 700;
+  font-size: var(--font-size-title-desktop);
+}
+.box-text-slider p {
+  font-size: var(--font-size-p-desktop);
+}
+.box-text-slider a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: var(--font-color-primary);
+  background-color: var(--font-background-color);
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+.box-text-slider a:hover {
+  background-color: var(--font-color-hover);
+}
+
+.services-section {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.services-text h2{
+  font-size: var( --font-size-title-desktop);
   font-weight: 700;
 }
-.box-text-slider p{
-  font-size: 1.2rem;
+.services-text{
+  text-align: center;
+  width: 80%;
+  font-size: var(--font-size-p-desktop);
+}
+.services-container{
+  width: 100%;
+
+}
+
+.services-container img{
+  width: 140px;
+
+}
+
+.service-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.service-box h3{
+  font-weight: 700;
+}
+.service-box p{
+ font-size: var(--font-size-p-desktop);
+  
 }
