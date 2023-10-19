@@ -3,6 +3,7 @@ Object.assign(swiper3El, {
   effect: "creative",
   speed: 1000,
   loop: true,
+ 
   creativeEffect: {
     prev: {
       translate: ["-20%", 0, -1],
@@ -18,6 +19,33 @@ Object.assign(swiper3El, {
 });
 swiper3El.initialize();
 
+
+
+var splide = new Splide('.splide', {
+
+  perPage: 3,
+  rewind: true,
+  type: 'loop',
+  autoplay: 'play',
+  gap: '.5rem',
+  resetProgress: false,
+  breakpoints: {
+    992: {
+      perPage: 3,
+      height: '100%',
+    },
+    970: {
+      perPage: 2,
+      height: '100%',
+    },
+    760: {
+      perPage: 1,
+      height: '100%',
+    },
+  },
+});
+splide.mount();
+
 var navBar = document.querySelector(".navbar");
 
 document.addEventListener("scroll", btnHide);
@@ -31,5 +59,6 @@ function btnHide() {
     navBar.classList.add("navbar-custom");
   }
 }
-
 btnHide();
+
+
