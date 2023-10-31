@@ -119,8 +119,18 @@ iframe {
 
 }
 .assessment-title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.assessment-title h2{
   font-size: var(--font-size-title-desktop);
   font-weight: 700;
+}
+.assessment-title p{
+  font-size: var(--font-size-p-desktop);
+  font-weight: 500;
 }
 
 .slider-assessment{
@@ -153,7 +163,7 @@ color: #FFCE39;
 .splide__slide p{
   font-size: var(--font-size-p-desktop);
   font-weight: 500;
-  margin: 10px 0;
+  margin: 30px 0;
 }
 
 .splide img{
