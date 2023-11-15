@@ -46,7 +46,7 @@ splide.mount();
 
 var navBar = document.querySelector(".navbar");
 
-function nvabarColor() {
+function navbarColor() {
   const viewportWidth = window.innerWidth;
   if (window.scrollY > 0 || viewportWidth < 992) {
     navBar.classList.add("navbar-custom-trans", "shadow");
@@ -59,9 +59,9 @@ function nvabarColor() {
 }
 
 window.addEventListener('resize', function () {
-  nvabarColor()
+  navbarColor()
 });
-nvabarColor()
+navbarColor()
 
 const debounce = function (func, wait, immediate) {
   let timeout;
@@ -96,7 +96,7 @@ animeScroll();
 if (target.length) {
   window.addEventListener('scroll', debounce(function () {
     animeScroll();
-    nvabarColor()
+    navbarColor()
   }, 100));
 }
 
