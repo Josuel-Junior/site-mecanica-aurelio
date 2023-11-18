@@ -19,6 +19,8 @@ Object.assign(swiper3El, {
 });
 swiper3El.initialize();
 
+
+
 var splide = new Splide('.splide', {
   perPage: 3,
   rewind: true,
@@ -44,8 +46,14 @@ var splide = new Splide('.splide', {
 });
 splide.mount();
 
-var navBar = document.querySelector(".navbar");
+var slideContact = new Splide('#slideContact', {
+  type: 'fade',
+  rewind: true,
+  autoplay: 'play',
+});
+slideContact.mount();
 
+var navBar = document.querySelector(".navbar");
 function navbarColor() {
   const viewportWidth = window.innerWidth;
   if (window.scrollY > 0 || viewportWidth < 992) {
@@ -102,3 +110,5 @@ if (target.length) {
 
 ScrollReveal({ reset: true });
 ScrollReveal().reveal('.box-values', { duration: 2500 });
+
+
