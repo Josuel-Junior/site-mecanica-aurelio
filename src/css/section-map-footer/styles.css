@@ -1,6 +1,7 @@
 :root {
     --font-color-primary: #ffffff;
     --font-color-secondary: #c00113;
+    --font-background-hover: #8d0a17df;
     --background-color: #0e1011;
     --font-size-p-desktop: 1.1rem;
     --font-size-title-desktop: 2.6rem;
@@ -11,10 +12,12 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    position: relative;
 
 }
 
 .container-contact p {
+    color: var(--font-color-primary);
     font-weight: 500;
     font-size: var(--font-size-p-desktop);
 }
@@ -24,95 +27,49 @@
     font-weight: 700;
 }
 
-.contact-text {
+.contact-background {
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url(../../image/images/contact-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(35%);
+    position: relative;
+}
+
+.contact-text {
+    color: #ffffff;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
 }
 
 .contact {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
+    margin-top: 10px;
 }
 
-
-.box-contact {
-    margin: 10px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.box-contact p {
-    line-height: .8rem;
-    text-align: center;
-
-}
-
-.box-contact a {
+.contact a {
+    margin: 0 10px;
     text-decoration: none;
-    margin: 10px 0;
-    color: var(--background-color);
-    font-weight: 500;
-    position: relative;
-    display: inline;
-    transition: all .5s;
+    background-color: var(--font-color-secondary);
+    color: var(--font-color-primary);
+    padding: 10px;
+    border-radius: 7px;
+    transition: all .3s;
 }
 
-.box-contact a:hover {
-    color: #c00113;
-}
-
-.box-contact a h3 {
-    font-weight: 500;
-}
-
-.box-contact a:nth-child(1)::before {
-    content: '';
-    width: 25px;
-    height: 25px;
-    left: -30px;
-    top: 5px;
-    background-image: url(../../image/icon/phone.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-}
-
-.box-contact a:nth-child(2)::before {
-    content: '';
-    width: 25px;
-    height: 25px;
-    left: -30px;
-    top: 5px;
-    background-image: url(../../image/icon/whatsapp.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-}
-
-.box-contact a:nth-child(3)::before {
-    content: '';
-    width: 25px;
-    height: 25px;
-    left: 50px;
-    top: 5px;
-    background-image: url(../../image/icon/map.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-}
-
-.contact-text img {
-    border-radius: 15px;
+.contact a:hover {
+    background-color: var(--font-background-hover);
 }
 
 .location iframe {
-    min-height: 70vh;
+    min-height: 90vh;
     width: 100vw;
 }

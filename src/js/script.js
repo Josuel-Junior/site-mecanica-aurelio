@@ -46,13 +46,6 @@ var splide = new Splide('.splide', {
 });
 splide.mount();
 
-var slideContact = new Splide('#slideContact', {
-  type: 'fade',
-  rewind: true,
-  autoplay: 'play',
-});
-slideContact.mount();
-
 var navBar = document.querySelector(".navbar");
 function navbarColor() {
   const viewportWidth = window.innerWidth;
