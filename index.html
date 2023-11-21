@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="./src/css/section-about-we/styles.css" />
   <link rel="stylesheet" href="./src/css/section-map-footer/styles.css" />
   <link rel="stylesheet" href="./src/css/home/styles.css" />
-
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
   <link href="
@@ -40,11 +39,10 @@
           aria-controls="offcanvasNavbar">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
           <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-              Padaria Cardeal
+              Mecânica do Aurélio
             </h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
@@ -54,16 +52,16 @@
                 <a class="nav-link " aria-current="page" href="#">Início</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="">Serviços</a>
+                <a class="nav-link" href="#services">Serviços</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="">Sobre Nós</a>
+                <a class="nav-link" href="#about-we">Sobre Nós</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="#contact">Contato</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="">Contato</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="">Localização</a>
+                <a class="nav-link" href="#location">Localização</a>
               </li>
             </ul>
           </div>
@@ -71,14 +69,17 @@
       </div>
     </nav>
   </header>
-  <swiper-container init="false" class="mySwiper3">
+  <swiper-container init="false" class="mySwiper">
     <swiper-slide>
       <div class="box-text-slider">
-        <h2 class="focus-in-expand">Bem-vindo à Mecânica do Aurélio</h2>
+        <h2 class="focus-in-expand">Mecânica do Aurélio</h2>
         <p>Somos uma mecânica especializada em carros nacionais e importadaos</p>
         <a href="">Contato</a>
       </div>
-      <img src="./src/image/images/slide-1.png" alt="">
+      <picture>
+        <source srcset="./src/image/images/slide-mobile-1.webp" type="image/png" media="(max-width: 768px)">
+        <img src="./src/image/images/slide-1.webp" class="img" alt="Slide 1 da página inicial do site">
+      </picture>
     </swiper-slide>
     <swiper-slide>
       <div class="box-text-slider">
@@ -86,7 +87,10 @@
         <p>A excelência é a marca registrada da Mecânica do Aurélio</p>
         <a href="">Sobre nós</a>
       </div>
-      <img src="./src/image/images/slide-2.png" alt="">
+      <picture>
+        <source srcset="./src/image/images/slide-mobile-2.webp" type="image/png" media="(max-width: 768px)">
+        <img src="./src/image/images/slide-2.webp" class="img" alt="Slide 2 da página inicial do site">
+      </picture>
     </swiper-slide>
     <swiper-slide>
       <div class="box-text-slider">
@@ -94,11 +98,14 @@
         <p>Nossos mecânicos, aliados a equipamentos de última geração, garantem um serviço de qualidade impecável</p>
         <a href="">Serviços</a>
       </div>
-      <img src="./src/image/images/slide-3.png" alt="">
+      <picture>
+        <source srcset="./src/image/images/slide-mobile-3.webp" type="image/webp" media="(max-width: 768px)">
+        <img src="./src/image/images/slide-3.webp" class="img" alt="Slide 2 da página inicial do site">
+      </picture>
     </swiper-slide>
   </swiper-container>
 
-  <section class="services-section">
+  <section class="services-section" id="services">
     <div class="services-text py-3">
       <h2>Nossos Serviços</h2>
       <p>A Mecânica do Aurélio é uma empresa renomada e dedicada a fornecer uma ampla
@@ -110,34 +117,35 @@
     <div class="services-container">
       <div class="row d-flex align-items-start justify-content-center">
         <div class="service-box old-in-left col-12 col-md-4 col-xl-3 p-2 ">
-          <img src="./src/image/icon/brakes.svg" alt="">
+          <img src="./src/image/icon/brakes.svg" alt="Ícone que representa a manutenção de freios">
           <h3>Revisão de Freio</h3>
           <p>Garanta viagens seguras com nossa manutenção de freio especializada.</p>
         </div>
         <div class="service-box old-in-left col-12 col-md-4 col-xl-3 p-2">
-          <img src="./src/image/icon/engine.svg" alt="">
+          <img src="./src/image/icon/engine.svg" alt="Ícone que representa a manutenção da injeção eletrônica">
           <h3>Injeção eletrônica</h3>
           <p>Mecânica do Aurélio: Especialista em injeção eletrônica para o máximo desempenho.</p>
         </div>
         <div class="service-box old-in-left col-12 col-md-4 col-xl-3 p-2">
-          <img src="./src/image/icon/oil.svg" alt="">
+          <img src="./src/image/icon/oil.svg" alt="Ícone que representa a troca de óleo">
           <h3>Troca de óleo</h3>
           <p>A troca de óleo do motor é essencial. Conte conosco para um serviço rápido e eficiente.</p>
         </div>
       </div>
       <div class="row d-flex align-items-start justify-content-center">
         <div class="service-box old-in-left col-12 col-md-4 col-xl-3 p-2">
-          <img src="./src/image/icon/tire.svg" alt="">
+          <img src="./src/image/icon/tire.svg" alt="Ícone que representa a importância da troca de pneus">
           <h3>Troca de Pneus</h3>
           <p>Nossa troca de pneus garante qualidade e eficiência, mantendo seu veículo na estrada.</p>
         </div>
         <div class="service-box old-in-left col-12 col-md-4 col-xl-3 p-2">
-          <img src="./src/image/icon/transmission.svg" alt="">
+          <img src="./src/image/icon/transmission.svg"
+            alt="Ícone que representa a manutenção do sistema de transmissão">
           <h3>Transmissão</h3>
           <p>Nossa manutenção de transmissão garante eficiência e segurança da sua transmissão.</p>
         </div>
         <div class="service-box old-in-left col-12 col-md-4 col-xl-3 p-2">
-          <img src="./src/image/icon/car.svg" alt="">
+          <img src="./src/image/icon/car.svg" alt="Ícone que representa o serviço de leva e trás">
           <h3>Serviços de Leva e Traz</h3>
           <p>Oferecemos serviço de leva e traz para sua comodidade</p>
         </div>
@@ -145,7 +153,7 @@
     </div>
   </section>
 
-  <section class="about-we-section">
+  <section class="about-we-section" id="about-we">
     <div class="about-we-container">
       <div class="about-we-title py-3">
         <h2>Mecânica do Aurélio</h2>
@@ -172,7 +180,7 @@
             na área de mecânica automotiva em Pouso Alegre, MG.
             Com uma tradição sólida e um compromisso inabalável com a excelência, a empresa atua no setor de manutenção
             de carros nacionais e importados, oferecendo uma ampla gama de serviços especializados.</p>
-          <a href="">Contato</a>
+          <a href="#contact">Contato</a>
         </div>
         <div class="col-12 col-md-6 col-xl-4 py-4">
           <iframe src="https://www.youtube.com/embed/0FLiGdrHFVY" title="Mecânica do Aurélio" frameborder="0"
@@ -198,7 +206,8 @@
         <div class="splide__track">
           <ul class="splide__list">
             <li class="splide__slide">
-              <img src="./src/image/icon/testimonial-1.png" alt="">
+              <img src="./src/image/icon/testimonial-1.png"
+                alt="Ícone que representa o Depoimento do cliente sobre a empresa mecânica do Aurélio">
               <p>"Melhor oficina de Pouso Alegre. Funcionários dedicados e gerência excelente. Comodidade de levar e
                 trazer, além de preços e condições de pagamento. Recomendo!"</p>
               <h3>Léo Junior</h3>
@@ -211,7 +220,8 @@
               </div>
             </li>
             <li class="splide__slide">
-              <img src="./src/image/icon/testimonial-2.png" alt="">
+              <img src="./src/image/icon/testimonial-2.png"
+                alt="Ícone que representa o Depoimento do cliente sobre a empresa mecânica do Aurélio">
               <p>"Prestam um trabalho excelente, desde o atendimento até a resolução do problema. Super recomendo. Foram
                 à minha casa e, depois, levaram o carro. Era um problema simples e foram super honestos."</p>
               <h3>Jana Marques</h3>
@@ -224,7 +234,8 @@
               </div>
             </li>
             <li class="splide__slide">
-              <img src="./src/image/icon/testimonial-3.png" alt="">
+              <img src="./src/image/icon/testimonial-3.png"
+                alt="Ícone que representa o Depoimento do cliente sobre a empresa mecânica do Aurélio">
               <p>"Ótimo atendimento, profissionais de qualidade e preços justos. Eles não inventam problemas no carro,
                 são muito honestos."</p>
               <h3>Aguinaldo Morais</h3>
@@ -237,7 +248,8 @@
               </div>
             </li>
             <li class="splide__slide">
-              <img src="./src/image/icon/testimonial-4.png" alt="">
+              <img src="./src/image/icon/testimonial-4.png"
+                alt="Ícone que representa o Depoimento do cliente sobre a empresa mecânica do Aurélio">
               <p>"Super indico essa oficina, têm profissionais muito competentes e são ágeis nos consertos, além de
                 oferecerem um bom preço."</p>
               <h3>Ana Carolina</h3>
@@ -250,7 +262,8 @@
               </div>
             </li>
             <li class="splide__slide ">
-              <img src="./src/image/icon/testimonial-5.png" alt="">
+              <img src="./src/image/icon/testimonial-5.png"
+                alt="Ícone que representa o Depoimento do cliente sobre a empresa mecânica do Aurélio">
               <p>"Esta oficina se destaca na mecânica automotiva. Atendimento excepcional, equipe qualificada, reparos
                 rápidos e preços justos. Recomendo a todos!"</p>
               <h3>Gabriel Silva</h3>
@@ -269,18 +282,18 @@
     </div>
   </section>
   <section>
-    <div class="container-contact">
+    <div class="container-contact" id="contact">
       <div class="contact-text">
         <div class="text">
           <h2>Entre em Contato Conosco</h2>
           <p>A equipe da Mecânica do Aurélio está pronta para atendê-lo!</p>
         </div>
         <div class="contact">
-          <a href="">
+          <a href="tel:+55353422-2266" target="_blank">
             <i class="fa-solid fa-phone"></i>
             (35) 3422-2266
           </a>
-          <a href="">
+          <a href="https://wa.me/5535999110052" target="_blank">
             <i class="fa-brands fa-whatsapp"></i>
             (35) 9911-0052
           </a>
@@ -292,9 +305,7 @@
   </section>
 
 
-
-
-  <section>
+  <section id="location">
     <div class="location">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14774.682183357849!2d-45.9121992!3d-22.2146233!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cbc7f2224b96f1%3A0xa134f3583c942d06!2zTWVjw6JuaWNhIGRvIEF1csOpbGlv!5e0!3m2!1spt-BR!2sbr!4v1700051071995!5m2!1spt-BR!2sbr"
@@ -305,13 +316,13 @@
   <footer>
     <div class="container-footer">
       <nav class="nav-footer">
-         <img src="./src/image/logo/icon-navbar.png" alt="">
+        <img src="./src/image/logo/icon-navbar.png" alt="">
         <div class="box-footer">
-          <a href="">Início</a>
-          <a href="">Serviços</a>
-          <a href="">Contato</a>
-          <a href="">Sobre Nós</a>
-          <a href="">Localização</a>
+          <a href="#">Início</a>
+          <a href="#services">Serviços</a>
+          <a href="#contact">Contato</a>
+          <a href="#about-we">Sobre Nós</a>
+          <a href="#location">Localização</a>
         </div>
       </nav>
     </div>

@@ -29,6 +29,14 @@
   font-weight: 700;
 }
 
+@media(max-width: 768px) {
+  .about-we-title h2 {
+    font-size: calc(var(--font-size-title-desktop) - .8rem);
+    font-weight: 700;
+  }
+}
+
+
 .box-values h3 {
   color: var(--font-color-primary);
   position: relative;
@@ -112,7 +120,6 @@ iframe {
   height: 280px;
 }
 
-
 .assessment-section {
   height: 100vh;
   width: 100vw;
@@ -128,12 +135,26 @@ iframe {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .assessment-title h2 {
   font-size: var(--font-size-title-desktop);
   font-weight: 700;
 }
+
+@media(max-width: 768px) {
+  .assessment-title h2 {
+    font-size: calc(var(--font-size-title-desktop) - .8rem);
+    font-weight: 700;
+  }
+
+  .assessment-title p {
+    font-size: calc(var(--font-size-title-desktop) - .8rem);
+    font-weight: 700;
+  }
+}
+
 
 .assessment-title p {
   font-size: var(--font-size-p-desktop);
@@ -179,13 +200,11 @@ iframe {
   border-radius: 50%;
 }
 
-
 .background-service {
-  background-image: url(../../image/images/background.png);
+  background-image: url(../../image/images/background.webp);
   background-size: cover;
   width: 100vw;
   min-height: 60vh;
   background-position: center;
   background-attachment: fixed;
-  /* filter: brightness(50%); */
 }

@@ -1,4 +1,4 @@
-var swiper3El = document.querySelector(".mySwiper3");
+var swiper3El = document.querySelector(".mySwiper");
 Object.assign(swiper3El, {
   effect: "creative",
   speed: 1000,
@@ -101,7 +101,7 @@ if (target.length) {
   }, 100));
 }
 
-ScrollReveal({ reset: true });
+ScrollReveal({ reset: false });
 ScrollReveal().reveal('.box-values', { duration: 2500 });
 
 
