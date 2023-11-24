@@ -1,69 +1,3 @@
-var swiper3El = document.querySelector(".mySwiper");
-Object.assign(swiper3El, {
-  effect: "creative",
-  speed: 1000,
-  loop: true,
-
-  creativeEffect: {
-    prev: {
-      translate: ["-20%", 0, -1],
-    },
-    next: {
-      translate: ["100%", 0, 0],
-    },
-  },
-  autoplay: {
-    delay: 4000,
-    disableOnInteraction: false,
-  },
-});
-swiper3El.initialize();
-
-
-
-var splide = new Splide('.splide', {
-  perPage: 3,
-  rewind: true,
-  type: 'loop',
-  autoplay: 'play',
-  gap: '.5rem',
-  interval: 3000,
-  pauseOnHover: true,
-  breakpoints: {
-    992: {
-      perPage: 3,
-      height: '100%',
-    },
-    970: {
-      perPage: 2,
-      height: '100%',
-    },
-    760: {
-      perPage: 1,
-      height: '100%',
-    },
-  },
-});
-splide.mount();
-
-var navBar = document.querySelector(".navbar");
-function navbarColor() {
-  const viewportWidth = window.innerWidth;
-  if (window.scrollY > 0 || viewportWidth < 992) {
-    navBar.classList.add("navbar-custom-trans", "shadow");
-    navBar.classList.remove("navbar-custom");
-  }
-  else if (window.scrollY === 0 && viewportWidth > 992) {
-    navBar.classList.remove("navbar-custom-trans", "shadow");
-    navBar.classList.add("navbar-custom");
-  }
-}
-
-window.addEventListener('resize', function () {
-  navbarColor()
-});
-navbarColor()
-
 const debounce = function (func, wait, immediate) {
   let timeout;
   return function (...args) {
@@ -78,6 +12,12 @@ const debounce = function (func, wait, immediate) {
     if (callNow) func.apply(context, args);
   };
 };
+
+window.addEventListener("DOMContentLoaded", function () {
+  var preloader = document.getElementsByClassName('loader');
+  preloader[0].style.display = "none";
+})
+
 
 const target = document.querySelectorAll(".service-box");
 const targetSection = document.querySelector(".services-container");
@@ -103,5 +43,15 @@ if (target.length) {
 
 ScrollReveal({ reset: false });
 ScrollReveal().reveal('.box-values', { duration: 2500 });
+const btnBack = document.getElementById("btnTop")
+btnBack.addEventListener("click", function () {
+  window.scroll(0, 0)
+})
 
+document.addEventListener('scroll', btnHide)
+
+function btnHide() {
+  window.scrollY > 400 ? btnBack.classList.add('on') : btnBack.classList.remove('on')
+
+}
 

@@ -11,6 +11,16 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
+.offcanvas-header h5 {
+  font-weight: 700;
+  color: #c00113;
+}
+
 :root {
   --font-color-primary: #ffffff;
   --font-color-secondary: #c00113;
@@ -19,9 +29,46 @@ body {
   --font-size-title-desktop: 2.6rem;
 }
 
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 9999
+}
+
+.loader .inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+.button-back {
+  position: fixed;
+  right: 5px;
+  bottom: 150px;
+  cursor: pointer;
+  transition: all .5s;
+  transform: translateX(100px);
+  font-size: 2rem;
+  z-index: 88888;
+}
+
+.button-back i {
+  color: var(--font-color-secondary);
+  z-index: 55555;
+}
+
+.button-back.on {
+  transform: translateX(0px)
+}
+
 
 .navbar-brand img {
-  width: 220px;
+  width: 200px;
 }
 
 .nav-item a {
@@ -55,6 +102,26 @@ body {
   background-color: var(--font-background-hover);
   border-radius: 5px;
 }
+
+@media(max-width: 768px) {
+  .nav-item {
+    border-bottom: solid .1rem;
+    border-color: var(--font-color-secondary);
+  }
+
+  .nav-item:nth-child(4) a {
+    background-color: var(--font-color-primary);
+    color: #000000a6;
+    border-radius: 0;
+  }
+
+  .nav-item:nth-child(4) a:hover {
+    color: #000000a6;
+    background-color: var(--font-color-primary);
+  }
+}
+
+
 
 swiper-container {
   width: 100vw;
@@ -90,6 +157,7 @@ swiper-slide img {
 
 .box-text-slider p {
   font-size: var(--font-size-p-desktop);
+
 }
 
 .box-text-slider a {
@@ -173,10 +241,19 @@ swiper-slide img {
   text-align: center;
 }
 
+.services-text p {
+  text-align: center;
+}
+
 @media(max-width: 768px) {
   .services-text h2 {
     font-size: calc(var(--font-size-title-desktop) - .8rem);
   }
+
+  .services-text p {
+    text-align: left;
+  }
+
 }
 
 
@@ -193,6 +270,7 @@ swiper-slide img {
 
 .services-container img {
   width: 140px;
+  height: 140px;
   transition: all 0.3s;
 }
 
