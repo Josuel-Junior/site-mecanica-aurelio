@@ -1,4 +1,4 @@
-# Mecánica do Aurélio
+# Mecânica do Aurélio
 
 # Sobre o projeto
 
